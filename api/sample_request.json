@@ -1,0 +1,9 @@
+{
+  "Age": 35,
+  "TenureMonths": 8,
+  "MonthlyCharges": 92.5,
+  "Contract": "Month-to-month",
+  "InternetService": "Fiber optic",
+  "TechSupport": "No",
+  "PaymentMethod": "Electronic check"
+}

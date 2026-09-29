@@ -1,0 +1,63 @@
+TASK 3 — MODEL DEPLOYMENT: API & CONTAINERIZATION
+InternSpark Artificial Intelligence Internship
+
+Project title:
+Customer Churn Prediction REST API with Flask and Docker
+
+1. Objective
+Wrap the trained customer churn model in a simple API and provide Docker-based local execution.
+
+2. API
+Framework: Flask
+Main file: api/app.py
+
+Endpoints:
+GET /
+GET /health
+POST /predict
+
+3. Prediction request
+The POST /predict endpoint accepts JSON with:
+Age
+TenureMonths
+MonthlyCharges
+Contract
+InternetService
+TechSupport
+PaymentMethod
+
+Example request file:
+api/sample_request.json
+
+4. Example PowerShell command
+$body = Get-Content .pi\sample_request.json -Raw
+Invoke-RestMethod -Uri http://127.0.0.1:5000/predict -Method Post -ContentType "application/json" -Body $body
+
+5. Docker
+Dockerfile is included at the repository root.
+
+Build:
+docker build -t internspark-churn-api .
+
+Run:
+docker run --rm -p 5000:5000 internspark-churn-api
+
+6. Deliverables
+- GitHub repository with API code
+- Dockerfile
+- Sample request
+- README with exact setup commands
+- Local API demo screenshot or PowerShell example
+
+7. GitHub
+Repository: [PASTE YOUR GITHUB REPOSITORY LINK HERE]
+
+8. Screenshots to add
+- Flask server running
+- /health response
+- /predict response
+- Docker build output
+- Docker container running (if Docker is installed)
+
+9. Conclusion
+The trained ML model is packaged behind a REST API and can be executed locally either directly with Python or through Docker.

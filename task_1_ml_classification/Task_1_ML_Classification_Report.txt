@@ -1,0 +1,52 @@
+TASK 1 — ML CLASSIFICATION PROJECT
+InternSpark Artificial Intelligence Internship
+
+Project title:
+Customer Churn Classification using Logistic Regression and Random Forest
+
+1. Objective
+Build and evaluate a supervised classification model to predict whether a customer is likely to churn.
+
+2. Dataset
+A small reproducible customer dataset is included in data/customer_churn.csv. It contains customer demographics, tenure, charges, contract type, internet service, technical support, payment method and churn label.
+
+3. Preprocessing
+- Checked data types and class distribution.
+- Numeric features: median imputation + standardization.
+- Categorical features: most-frequent imputation + one-hot encoding.
+- Stratified 80/20 train-test split.
+- Gender is excluded from the predictive feature set and retained for Task 4 fairness analysis.
+
+4. Algorithms compared
+- Logistic Regression
+- Random Forest
+
+5. Evaluation
+The project reports Accuracy, Precision, Recall, F1-score, ROC-AUC and five-fold stratified cross-validation.
+
+Run:
+python src/train_model.py
+
+6. Deliverables
+- Notebook: notebooks/task1_customer_churn.ipynb
+- Training script: src/train_model.py
+- Model comparison: reports/model_comparison.csv
+- Confusion matrix: reports/confusion_matrix.png
+- ROC curve: reports/roc_curve.png
+- Results JSON: reports/task1_results.json
+
+7. Model selection
+The training script selects the model with the highest test ROC-AUC among the two candidates. Use the generated results files for the exact values.
+
+8. GitHub
+Repository: [PASTE YOUR GITHUB REPOSITORY LINK HERE]
+
+9. Screenshots to add
+- Dataset preview
+- Notebook execution
+- Model comparison table
+- Confusion matrix
+- ROC curve
+
+10. Conclusion
+The task demonstrates an end-to-end supervised classification workflow from preprocessing through model comparison and evaluation.

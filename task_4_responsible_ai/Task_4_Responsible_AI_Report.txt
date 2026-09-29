@@ -1,0 +1,54 @@
+TASK 4 — RESPONSIBLE AI & MODEL INTERPRETATION
+InternSpark Artificial Intelligence Internship
+
+Project title:
+Responsible AI Analysis for Customer Churn Prediction
+
+1. Objective
+Analyze model interpretation and fairness-related diagnostics using feature importance, SHAP where supported, and subgroup metrics.
+
+2. Model interpretation
+The project calculates permutation feature importance on the original feature columns.
+
+It also attempts a SHAP explanation using the fitted model and saves:
+reports/shap_summary.png
+
+3. Sensitive-group diagnostic
+Gender is available in the dataset but is not used as a predictive feature in the main model. The analysis compares descriptive metrics across Female and Male groups.
+
+Reported group metrics:
+- Positive prediction rate
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+4. Important interpretation
+Differences between groups are diagnostic observations, not automatic proof of discrimination. They can be affected by sample size, data composition, feature distributions, model thresholds and other factors.
+
+5. Mitigation recommendations
+- Avoid unnecessary sensitive attributes in model features.
+- Monitor subgroup precision, recall and positive prediction rate.
+- Review threshold choices and error costs by group.
+- Document data provenance and limitations.
+- Re-evaluate fairness after major data or model changes.
+
+6. Deliverables
+- Notebook: notebooks/task4_responsible_ai.ipynb
+- Script: src/responsible_ai.py
+- SHAP summary: reports/shap_summary.png when generated
+- Permutation importance: reports/permutation_importance.png
+- Group metrics: reports/gender_fairness_metrics.csv
+- JSON summary: reports/task4_responsible_ai.json
+
+7. GitHub
+Repository: [PASTE YOUR GITHUB REPOSITORY LINK HERE]
+
+8. Screenshots to add
+- SHAP summary plot
+- Feature importance plot
+- Gender group metrics table
+- Notebook output
+
+9. Conclusion
+The task adds transparency and subgroup monitoring to the churn model and documents practical steps for safer model use.

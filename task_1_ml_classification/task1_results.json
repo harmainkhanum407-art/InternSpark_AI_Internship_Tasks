@@ -1,0 +1,12 @@
+{
+  "best_model": "Logistic Regression",
+  "test_metrics": {
+    "accuracy": 0.7083333333333334,
+    "precision": 0.6557377049180327,
+    "recall": 0.7407407407407407,
+    "f1": 0.6956521739130435,
+    "roc_auc": 0.7856341189674523
+  },
+  "test_size": 120,
+  "random_state": 42
+}
